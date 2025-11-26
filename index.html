@@ -14,13 +14,51 @@
         }
 
         header {
-            background: #005cb9;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-        }
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .left,
+header .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 38px;
+    object-fit: contain;
+}
+
+header span {
+    font-size: 22px;
+    font-weight: 300;
+    color: #aaa;
+}
+
+.page-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+.page-link:hover {
+    background: #005cb920;
+    color: #005cb9;
+}
+
 
         header h1 {
             margin: 0;
@@ -88,9 +126,9 @@
 
 <body>
     <header>
-        <img class="logo" href="https://trackunit.com/wp-content/uploads/2022/03/top-logo.svg" />
+        <img class="logo" src="https://trackunit.com/wp-content/uploads/2022/03/top-logo.svg" />
         <span>x</span>
-        <img class="logo" href="https://th.bing.com/th/id/OIP.hkncaLFXk48ofU085KR5mQHaCI?w=344&h=100&c=7&r=0&o=7&pid=1.7&rm=3" />
+        <img class="logo" src="https://th.bing.com/th/id/OIP.hkncaLFXk48ofU085KR5mQHaCI?w=344&h=100&c=7&r=0&o=7&pid=1.7&rm=3" />
         <div style="width: 30px;"></div>
         <a class="page-link" href="index.html">Home</a>
         <a class="page-link" href="about.html">About</a>
