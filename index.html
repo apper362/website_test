@@ -14,16 +14,39 @@
         }
 
         header {
-    width: 100%;
+    width: 82%;
     background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 32px;
+    padding: 1.1% 9%;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+welcome {
+    background: white;
+    margin: 15px;
+    padding: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-radius: 12px;
+}
+
+.header-clump{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px;
 }
 
 header .left,
@@ -49,8 +72,9 @@ header span {
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    padding: 8px 14px;
+    padding: 12px 32px;
     border-radius: 6px;
+    background: #005cb91a;
     transition: 0.2s ease;
 }
 
@@ -60,14 +84,16 @@ header span {
 }
 
 
-        header h1 {
+        welcome h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 600;
+            padding: 10px;
         }
 
-        header p {
-            font-size: 18px;
+        welcome p {
+            padding: 8px;
+            font-size: 21px;
             opacity: 0.9;
         }
 
@@ -121,14 +147,135 @@ header span {
         .cta-btn:hover {
             background: #004a97;
         }
+
+        .do-btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 5px;
+}
+
+.do-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+}
+
+/* Colors */
+.do-btn-blue {
+    background: linear-gradient(135deg, #3a7afe, #005cb9);
+}
+
+.do-btn-green {
+    background: linear-gradient(135deg, #3ecf8e, #0f9d58);
+}
+
+.do-btn-pink {
+    background: linear-gradient(135deg, #ff6fb1, #e92f70);
+}
+
+/* Optional: darker press effect */
+.btn:active {
+    transform: scale(0.94);
+}
+
+
+.signup-container {
+    max-width: 520px;
+    margin: 60px auto;
+    padding: 32px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.signup-container h2 {
+    margin-bottom: 24px;
+    color: #005cb9;
+}
+
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.signup-container input {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.2s;
+    width: 50%;
+    margin: 5px;
+}
+
+.signup-container input:focus {
+    border-color: #005cb9;
+    box-shadow: 0 0 8px rgba(0, 92, 185, 0.2);
+    outline: none;
+}
+
+.signup-container button {
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #3a7afe, #005cb9);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.signup-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.signup-container p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-container a {
+    color: #005cb9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}
+
+.form-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+h3{
+    min-width: 180px;
+}
+
     </style>
 </head>
 
 <body>
     <header>
-        <img class="logo" src="https://trackunit.com/wp-content/uploads/2022/03/top-logo.svg" />
-        <span>x</span>
-        <img class="logo" src="https://th.bing.com/th/id/OIP.hkncaLFXk48ofU085KR5mQHaCI?w=344&h=100&c=7&r=0&o=7&pid=1.7&rm=3" />
+        <div class="header-clump">
+            <img class="logo" src="https://trackunit.com/wp-content/uploads/2022/03/top-logo.svg" />
+            <span>x</span>
+            <img class="logo" src="https://th.bing.com/th/id/OIP.hkncaLFXk48ofU085KR5mQHaCI?w=344&h=100&c=7&r=0&o=7&pid=1.7&rm=3" />
+        </div>
         <div style="width: 30px;"></div>
         <a class="page-link" href="index.html">Home</a>
         <a class="page-link" href="about.html">About</a>
@@ -136,11 +283,79 @@ header span {
     </header>
 
     <welcome>
-        <h1>Trackunit Setup Guide</h1>
-        <p>For United Rentals customers using Trackunit hardware and telematics services</p>
+        <h1>Congratulations on your equipment purchase from United Rentals.</h1>
+        <p>Great news, the equipment you purchased comes equipped with telematics from Trackunit. Telematics allows you to optimize the value of your equipment and Trackunit is the market leader in off-highway IoT with the mission to eliminate downtime.</p>
+        <p>Let's get started on activating your Trackunit subscription.</p>
+        <div class="step">
+            <p>Do you have existing subscriptions with Trackunit?</p>
+        </div>
+        <buttonbar>
+            <button class="do-btn do-btn-green" onclick="open('yes')">Yes</button>
+            <button class="do-btn do-btn-pink" onclick="open('no')">No</button>
+            <button class="do-btn do-btn-blue" onclick="open('notsure')">Not Sure</button>
+        </buttonbar>
+        <div id="dialog-yes">
+            <h2>If you have an Existing Account:</h2>
+            <p>Awesome, please enter your Trackunit Manager Account ID for options to set up your device:</p>
+            <div class="signup-container" style="margin-top:0;margin-bottom:0;">
+                <form id="signupForm">
+                    <div class="form-line"><h3>Trackunit Manager Email:</h3><input type="email" placeholder="account@email.com" required /></div>
+                    <div class="form-line"><h3>Account Password:</h3><input type="password" placeholder="securepassword123" required /></div>
+                    <button type="submit" onclick="alert('this will log the user into the trackunit platform')">Log In</button>
+                </form>
+            </div>
+            <h3 style="text-align: center;padding: 10px;font-size: 24px;">Options:</h3>
+            <buttonbar style="display: flex;flex-direction: column;">
+            <button class="do-btn do-btn-green" onclick="alert('this will activate the subscription')">Activate 12-month subscription at current subscription pricing</button>
+            <button class="do-btn do-btn-pink" onclick="alert('this will link into the united rentals total control account')">Access your equipment from your United Rental's Total Control account</button>
+            </buttonbar>
+        </div>
+
+        <div id="dialog-no" style="display:none;">
+            <h2>If you do not have an Existing Account:</h2>
+            <p>Don't worry! We can easily set you up as a customer, we just need a little more information. Please fill out this short sign up form.</p>
+            <div class="signup-container">
+            <form id="signupForm">
+              <h2>Basic Information:</h2>
+              <div class="form-line"><h3>Customer Name:</h3><input type="text" placeholder="Customer Name (e.g. Jack's Construction Inc.)" required /></div>
+              <div class="form-line"><h3>Main Account Contact:</h3><input type="email" placeholder="Email" required /><input type="phone-number" placeholder="Phone Number" required /></div>
+              <h2>Delivery Information:</h2>
+              <div class="form-line"><h3>Billing Address:</h3><input type="address" placeholder="Billing Address" required /></div>
+              <div class="form-line"><h3>Delivery Information:</h3><input type="other" placeholder="Zip Code" required /><input type="other" placeholder="Fed Ex Routing Guide" /></div>
+              <h2>Payment Information:</h2>
+              <div class="form-line"><h3>Tax ID or Vat No.:</h3><input type="other" placeholder="Tax ID" required /></div>
+              <div class="form-line"><h3>Statement Email:</h3><input type="email" placeholder="statementperson@company.co" required /></div>
+              <div class="form-line"><h3>Accounts Payable Contact:</h3><input type="email" placeholder="Email" required /><input type="phone-number" placeholder="Phone Number" required /></div>
+              <div class="form-line"><h3>Order Confirmation Email:</h3><input type="email" placeholder="confirmerperson@company.co" /></div>
+              <h2>Additional Information:</h2>
+              <div class="form-line"><h3>Additional Emails for account:</h3><input type="password" placeholder="Additional emails" required /></div>
+              <div class="form-line"><h3>Account Currency:</h3><input type="password" placeholder="Pay Currency (e.g. USD)" required /></div>
+              <button type="submit">Sign Up</button>
+            </form>
+            </div>
+        </div>
+
+        <div id="dialog-notsure" style="display: none;">
+            <h2>If you are unsure if you have an Existing Account:</h2>
+            <p>No problem, we have lots of resources to help.</p>
+            <button class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
+            <button class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
+            <p>When you've solved it, we're ready for the next steps:</p>
+            <buttonbar>
+            <button class="do-btn do-btn-green" onclick="open('yes')">I have an Existing Account</button>
+            <button class="do-btn do-btn-pink" onclick="open('no')">I do not have an Existing Account</button>
+            </buttonbar>
+        </div>
+
+        <buttonbar style="margin-top: 50px;">
+            <p>More resources:</p>
+            <button class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
+            <button class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
+            <button class="do-btn do-btn-pink">Support</button>
+        </buttonbar>
     </welcome>
 
-    <div class="container">
+    <div class="container" style="display:none;">
         <h2>Getting Started</h2>
         <p>This page walks you through installing, activating, and verifying your Trackunit device provided through United Rentals. Follow the steps below to ensure your equipment is reporting correctly.</p>
 
@@ -192,5 +407,15 @@ header span {
     <footer>
         Trackunit & United Rentals • Setup & Activation Guide
     </footer>
+
+    <script>
+        function open(dialog){
+            document.getElementById('dialog-yes').style.display = 'none';
+            document.getElementById('dialog-no').style.display = 'none';
+            document.getElementById('dialog-notsure').style.display = 'none';
+            document.getElementById('dialog-'+dialog).style.display = "block";
+        }
+        window.intercomSettings = {app_id: 'wlmkwlpp', anonymous_id: '072ea370-eead-4f7e-a03f-2fd8e8d88cc5'}
+    </script>
 </body>
 </html>
