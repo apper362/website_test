@@ -126,7 +126,9 @@ header span {
             padding: 20px;
             border-radius: 10px;
             background: #f1f5fb;
+            border: rgba(128, 128, 128, 0.169) 2px solid;
             border-left: 4px solid #005cb9;
+    
         }
 
         .step h3 {
@@ -311,12 +313,14 @@ button:hover, .page-link:hover {
         <p>Let's get started on activating your Trackunit subscription.</p>
         <div class="step">
             <p>Do you have existing subscriptions with Trackunit?</p>
-        </div>
-        <buttonbar>
+        <buttonbar style="width: 100%;display: flex;flex-direction: row;justify-content: center;">
             <button type="button" class="do-btn do-btn-green" onclick="openMenu('yes')">Yes</button>
             <button type="button" class="do-btn do-btn-pink" onclick="openMenu('no')">No</button>
             <button type="button" class="do-btn do-btn-blue" onclick="openMenu('notsure')">Not Sure</button>
         </buttonbar>
+        
+        </div>
+        
         <div id="dialog-yes" class="step" style="display: none;">
             <h2>If you have an Existing Account:</h2>
             <p>Awesome, please enter your Trackunit Manager Account ID for options to set up your device:</p>
@@ -429,7 +433,7 @@ button:hover, .page-link:hover {
     </div>
 
     <footer>
-        Trackunit & United Rentals • Setup & Activation Guide
+        Trackunit & United Rentals • Subscription Activation Guide
     </footer>
 
     <script>
