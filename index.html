@@ -80,8 +80,8 @@ header span {
 }
 
 .page-link:hover {
-    background: #005cb920;
-    color: #005cb9;
+    background: #c7c7c7f3;
+    color: #000000;
 }
 
 
@@ -311,7 +311,7 @@ button:hover, .page-link:hover {
             <button type="button" class="do-btn do-btn-pink" onclick="openMenu('no')">No</button>
             <button type="button" class="do-btn do-btn-blue" onclick="openMenu('notsure')">Not Sure</button>
         </buttonbar>
-        <div id="dialog-yes" style="display: none;">
+        <div id="dialog-yes" class="step" style="display: none;">
             <h2>If you have an Existing Account:</h2>
             <p>Awesome, please enter your Trackunit Manager Account ID for options to set up your device:</p>
             <div class="signup-container" style="margin-top:0;margin-bottom:0;">
@@ -328,7 +328,7 @@ button:hover, .page-link:hover {
             </buttonbar>
         </div>
 
-        <div id="dialog-no" style="display:none;">
+        <div id="dialog-no" class="step" style="display:none;">
             <h2>If you do not have an Existing Account:</h2>
             <p>Don't worry! We can easily set you up as a customer, we just need a little more information. Please fill out this short sign up form.</p>
             <div class="signup-container">
@@ -352,7 +352,7 @@ button:hover, .page-link:hover {
             </div>
         </div>
 
-        <div id="dialog-notsure" style="display: none;">
+        <div id="dialog-notsure" class="step" style="display: none;">
             <h2>If you are unsure if you have an Existing Account:</h2>
             <p>No problem, we have lots of resources to help.</p>
             <button type="button" class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
@@ -364,7 +364,8 @@ button:hover, .page-link:hover {
             </buttonbar>
         </div>
 
-        <buttonbar style="margin-top: 50px;">
+        <buttonbar style="margin-top: 70px;">
+            <hr/>
             <p>More resources:</p>
             <button type="button" class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
             <button type="button" class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
