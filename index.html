@@ -271,9 +271,17 @@ h3{
     width: 100px;
 }
 
-button {
+button, .page-link {
     border-radius: 100px !important;
+    border: 3px solid rgb(255, 0, 0) !important;
 }
+
+button:hover, .page-link:hover {
+    border-radius: 100px !important;
+    border: 6px solid rgb(255, 0, 0) !important;
+    opacity: 0.8;
+}
+
 
     </style>
 </head>
@@ -310,10 +318,10 @@ button {
                 <form id="signupForm">
                     <div class="form-line"><h3>Trackunit Manager Email:</h3><input type="email" placeholder="account@email.com" required /></div>
                     <div class="form-line"><h3>Account Password:</h3><input type="password" placeholder="securepassword123" required /></div>
-                    <button type="submit" onclick="alert('this will log the user into the trackunit platform')">Log In</button>
+                    <button type="button" onclick="alert('this will log the user into the trackunit platform')">Log In</button>
                 </form>
             </div>
-            <h3 style="text-align: center;padding: 10px;font-size: 24px;">Options:</h3>
+            <h3 style="text-align: center;padding: 10px;font-size: 24px;">Options To Get Started:</h3>
             <buttonbar style="display: flex;flex-direction: column;">
             <button type="button" class="do-btn do-btn-green" onclick="alert('this will activate the subscription')">Activate 12-month subscription at current subscription pricing</button>
             <button type="button" class="do-btn do-btn-pink" onclick="alert('this will link into the united rentals total control account')">Access your equipment from your United Rental's Total Control account</button>
@@ -424,6 +432,7 @@ button {
             document.getElementById('dialog-notsure').style.display = 'none';
             document.getElementById('dialog-'+dialog).style.display = "block";
             var element = document.getElementById('dialog-'+dialog);
+            const offset = 65;
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
             window.scrollTo({
                 top: elementPosition - offset,
