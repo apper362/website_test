@@ -299,11 +299,11 @@ button {
             <p>Do you have existing subscriptions with Trackunit?</p>
         </div>
         <buttonbar>
-            <button type="button" class="do-btn do-btn-green" onclick="open('yes')">Yes</button>
-            <button type="button" class="do-btn do-btn-pink" onclick="open('no')">No</button>
-            <button type="button" class="do-btn do-btn-blue" onclick="open('notsure')">Not Sure</button>
+            <button type="button" class="do-btn do-btn-green" onclick="openMenu('yes')">Yes</button>
+            <button type="button" class="do-btn do-btn-pink" onclick="openMenu('no')">No</button>
+            <button type="button" class="do-btn do-btn-blue" onclick="openMenu('notsure')">Not Sure</button>
         </buttonbar>
-        <div id="dialog-yes">
+        <div id="dialog-yes" style="display: none;">
             <h2>If you have an Existing Account:</h2>
             <p>Awesome, please enter your Trackunit Manager Account ID for options to set up your device:</p>
             <div class="signup-container" style="margin-top:0;margin-bottom:0;">
@@ -351,8 +351,8 @@ button {
             <button type="button" class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
             <p>When you've solved it, we're ready for the next steps:</p>
             <buttonbar>
-            <button type="button" class="do-btn do-btn-green" onclick="open('yes')">I have an Existing Account</button>
-            <button type="button" class="do-btn do-btn-pink" onclick="open('no')">I do not have an Existing Account</button>
+            <button type="button" class="do-btn do-btn-green" onclick="openMenu('yes')">I have an Existing Account</button>
+            <button type="button" class="do-btn do-btn-pink" onclick="openMenu('no')">I do not have an Existing Account</button>
             </buttonbar>
         </div>
 
@@ -418,13 +418,17 @@ button {
     </footer>
 
     <script>
-        function open(dialog){
+        function openMenu(dialog){
             document.getElementById('dialog-yes').style.display = 'none';
             document.getElementById('dialog-no').style.display = 'none';
             document.getElementById('dialog-notsure').style.display = 'none';
             document.getElementById('dialog-'+dialog).style.display = "block";
-        }
-        window.intercomSettings = {app_id: 'wlmkwlpp', anonymous_id: '072ea370-eead-4f7e-a03f-2fd8e8d88cc5'}
+            var element = document.getElementById('dialog-'+dialog);
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: "smooth"
+            });        }
     </script>
 </body>
 </html>
