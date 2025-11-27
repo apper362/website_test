@@ -15,7 +15,7 @@
 
         header {
     width: 82%;
-    background: white;
+    background: #bc2121;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,8 +74,9 @@ header span {
     color: #333;
     padding: 12px 32px;
     border-radius: 6px;
-    background: #005cb91a;
+    background: #ffffffbd;
     transition: 0.2s ease;
+    border-radius:100px;
 }
 
 .page-link:hover {
@@ -265,6 +266,14 @@ header span {
 h3{
     min-width: 180px;
 }
+.small-text {
+    font-size: 12px;
+    width: 100px;
+}
+
+button {
+    border-radius: 100px !important;
+}
 
     </style>
 </head>
@@ -277,9 +286,9 @@ h3{
             <img class="logo" src="https://th.bing.com/th/id/OIP.hkncaLFXk48ofU085KR5mQHaCI?w=344&h=100&c=7&r=0&o=7&pid=1.7&rm=3" />
         </div>
         <div style="width: 30px;"></div>
-        <a class="page-link" href="index.html">Home</a>
-        <a class="page-link" href="about.html">About</a>
-        <a class="page-link" href="support.html">Support</a>
+        <a class="page-link">Home</a>
+        <a class="page-link">About</a>
+        <a class="page-link">Support</a>
     </header>
 
     <welcome>
@@ -290,9 +299,9 @@ h3{
             <p>Do you have existing subscriptions with Trackunit?</p>
         </div>
         <buttonbar>
-            <button class="do-btn do-btn-green" onclick="open('yes')">Yes</button>
-            <button class="do-btn do-btn-pink" onclick="open('no')">No</button>
-            <button class="do-btn do-btn-blue" onclick="open('notsure')">Not Sure</button>
+            <button type="button" class="do-btn do-btn-green" onclick="open('yes')">Yes</button>
+            <button type="button" class="do-btn do-btn-pink" onclick="open('no')">No</button>
+            <button type="button" class="do-btn do-btn-blue" onclick="open('notsure')">Not Sure</button>
         </buttonbar>
         <div id="dialog-yes">
             <h2>If you have an Existing Account:</h2>
@@ -306,8 +315,8 @@ h3{
             </div>
             <h3 style="text-align: center;padding: 10px;font-size: 24px;">Options:</h3>
             <buttonbar style="display: flex;flex-direction: column;">
-            <button class="do-btn do-btn-green" onclick="alert('this will activate the subscription')">Activate 12-month subscription at current subscription pricing</button>
-            <button class="do-btn do-btn-pink" onclick="alert('this will link into the united rentals total control account')">Access your equipment from your United Rental's Total Control account</button>
+            <button type="button" class="do-btn do-btn-green" onclick="alert('this will activate the subscription')">Activate 12-month subscription at current subscription pricing</button>
+            <button type="button" class="do-btn do-btn-pink" onclick="alert('this will link into the united rentals total control account')">Access your equipment from your United Rental's Total Control account</button>
             </buttonbar>
         </div>
 
@@ -330,7 +339,7 @@ h3{
               <h2>Additional Information:</h2>
               <div class="form-line"><h3>Additional Emails for account:</h3><input type="password" placeholder="Additional emails" required /></div>
               <div class="form-line"><h3>Account Currency:</h3><input type="password" placeholder="Pay Currency (e.g. USD)" required /></div>
-              <button type="submit">Sign Up</button>
+              <button type="button">Sign Up</button>
             </form>
             </div>
         </div>
@@ -338,20 +347,20 @@ h3{
         <div id="dialog-notsure" style="display: none;">
             <h2>If you are unsure if you have an Existing Account:</h2>
             <p>No problem, we have lots of resources to help.</p>
-            <button class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
-            <button class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
+            <button type="button" class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
+            <button type="button" class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
             <p>When you've solved it, we're ready for the next steps:</p>
             <buttonbar>
-            <button class="do-btn do-btn-green" onclick="open('yes')">I have an Existing Account</button>
-            <button class="do-btn do-btn-pink" onclick="open('no')">I do not have an Existing Account</button>
+            <button type="button" class="do-btn do-btn-green" onclick="open('yes')">I have an Existing Account</button>
+            <button type="button" class="do-btn do-btn-pink" onclick="open('no')">I do not have an Existing Account</button>
             </buttonbar>
         </div>
 
         <buttonbar style="margin-top: 50px;">
             <p>More resources:</p>
-            <button class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
-            <button class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
-            <button class="do-btn do-btn-pink">Support</button>
+            <button type="button" class="do-btn do-btn-blue" onclick="window.location.href = 'https://help.trackunit.com/en/'">TrackUnit Help Center</button>
+            <button type="button" class="do-btn do-btn-green" onclick="window.location.href = 'https://help.trackunit.com/en/articles/238021-getting-help-with-the-trackunit-messenger'">TrackUnit Customer Support</button>
+            <button type="button" class="do-btn do-btn-pink">Support</button>
         </buttonbar>
     </welcome>
 
